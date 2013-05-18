@@ -4,7 +4,7 @@ Author: Eddie Machado
 
 This file should contain any js scripts you want to add to the site.
 Instead of calling it in the header or throwing it inside wp-head()
-this file will be called automatically in the footer so as not to 
+this file will be called automatically in the footer so as not to
 slow the page load.
 
 */
@@ -17,7 +17,7 @@ img.oldSrc=src;img.src=c.Config.spacer;},resize:function(func){var oldonresize=w
 func();}}}}
 
 // as the page loads, call these scripts
-$(document).ready(function() {
+jQuery(document).ready(function($) {
 
 	// add foundation classes and color based on how many times tag is used
 	function addFoundationClass(thisObj) {
@@ -41,12 +41,12 @@ $(document).ready(function() {
 	    addFoundationClass(this);
 	    return true;
 	});
-	
+
 	$("ol.commentlist a.comment-reply-link").each(function() {
 		$(this).addClass('button blue radius small');
 		return true;
 	});
-	
+
 	// Input placeholder text fix for IE
 	$('[placeholder]').focus(function() {
 	  var input = $(this);
@@ -61,7 +61,7 @@ $(document).ready(function() {
 		input.val(input.attr('placeholder'));
 	  }
 	}).blur();
-	
+
 	// Prevent submission of empty form
 	$('[placeholder]').parents('form').submit(function() {
 	  $(this).find('[placeholder]').each(function() {
@@ -71,5 +71,5 @@ $(document).ready(function() {
 		}
 	  })
 	});
-	 
+
 }); /* end of as page load scripts */
