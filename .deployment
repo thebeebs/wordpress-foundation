@@ -1,2 +1,2 @@
 [config]
-SCM_TARGET_PATH  \wp-content\themes
+SCM_TARGET_PATH  'D:\home\site\wwwroot\wp-content\themes'
